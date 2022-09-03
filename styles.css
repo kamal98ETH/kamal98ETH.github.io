@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.windows-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    background-color: black;
+    height: 220px;
+    width: 240px;
+
+    overflow: hidden;
+}
+
+.window-logo {
+    height: 80px;
+    width: 80px;
+    -webkit-transform: skew(-18deg);
+
+}
+
+.red-convex {
+    position: relative;
+    top: -18px;
+    left: 55.5px;
+}
+
+.red {
+    position: relative;
+    top: -42px;
+    left: 43px;
+    background-color: #FD6807;
+}
+
+.red-concave {
+    position: relative;
+    top: -74.5px;
+    left: 29.5px;
+}
+
+.blue-convex {
+    position: relative;
+    top: -119.5px;
+    left: 26px;
+}
+
+.blue {
+    position: relative;
+    top: -144px;
+    left: 13.2px;
+    background-color: #4068FD;
+}
+
+.blue-concave {
+    position: relative;
+    top: -177.5px;
+    left: 0px;
+}
+
+.green-concave {
+    position: relative;
+    top: -380px;
+    left: 147px;
+    z-index: 2;
+}
+
+.green {
+    position: relative;
+    top: -420px;
+    left: 133px;
+    background-color: #9CEF09;
+    z-index: 1;
+}
+
+.green-convex {
+    position: relative;
+    top: -437.5px;
+    left: 120px;
+    z-index: 2;
+}
+
+.yellow-concave {
+    position: relative;
+    top: -482.5px;
+    left: 115px;
+    z-index: 1;
+}
+
+.yellow {
+    position: relative;
+    top: -522.5px;
+    left: 102px;
+    background-color: #FFD013;
+}
+
+.yellow-convex {
+    position: relative;
+    top: -540px;
+    left: 89px;
+    z-index: 1;
+}
+
+.logo-text {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    position: relative;
+    top: -35px;
+    left: -55px;
+}
+
+.logo-text h1 {
+    font-size: 100px;
+    height: 80px;
+    display: inline;
+}
+
+.logo-text h2 {
+    font-size: 50px;
+    color: #FD6807;
+    padding-bottom: 55px;
+    display: inline;
+    position: relative;
+    top: -30px;
+}
+
+.logo-text h3 {
+    font-size: 30px;
+    font-weight: 300;
+    height: 20px;
+}
+
+.trademark {
+    font-size: 15px;
+}
+
+.windows-trademark {
+    position: relative;
+    top: -37px;
+}
+
+.microsoft-trademark {
+    position: relative;
+    top: -15px;
+}
