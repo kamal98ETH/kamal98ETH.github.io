@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+.body {
+    background-color: black;
+}
+
 .container {
     width: 100%;
     height: 100vh;
@@ -21,6 +25,7 @@
     flex-direction: column;
     align-items: center;
     padding-left: 150px;
+    margin-top: -100px;
 }
 
 .logo {
@@ -41,6 +46,7 @@
     top: -18px;
     left: 55.5px;
 }
+
 
 .red {
     position: relative;
@@ -133,7 +139,6 @@
 .logo-text h2 {
     font-size: 50px;
     color: #FD6807;
-    padding-bottom: 55px;
     display: inline;
     position: relative;
     top: -30px;
@@ -197,18 +202,216 @@
     position: absolute;
     bottom: 0;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
 }
 
 .microsoft-copyright {
-    width: 50%;
     font-size: 25px;
 }
 
 .microsoft {
-    width: 50%;
-    display: flex;
-    flex-direction: row-reverse;
     font-size: 40px;
     font-weight: 900;
+}
+
+@media (max-width: 850px) {
+    .windows-logo {
+        padding-left: 50px;
+    }
+
+    .logo {
+        height: 110px;
+        width: 120px;
+    }
+
+    .window-logo {
+        height: 40px;
+        width: 40px;
+    }
+
+    .red-convex {
+        top: -10px;
+        left: 28px;
+    }
+
+    .red {
+        top: -25px;
+        left: 22px;
+    }
+
+    .red-concave {
+        top: -39.5px;
+        left: 15px;
+    }
+
+    .blue-convex {
+        top: -64px;
+        left: 14px;
+    }
+
+    .blue {
+        top: -79px;
+        left: 7px;
+    }
+
+    .blue-concave {
+        top: -95px;
+        left: 0px;
+    }
+
+    .green-concave {
+        top: -202px;
+        left: 75px;
+    }
+
+    .green {
+        top: -224px;
+        left: 68px;
+    }
+
+    .green-convex {
+        top: -233px;
+        left: 61px;
+    }
+
+    .yellow-concave {
+        top: -257px;
+        left: 60px;
+    }
+
+    .yellow {
+        top: -279px;
+        left: 53px;
+    }
+
+    .yellow-convex {
+        top: -288px;
+        left: 47px;
+    }
+
+    .logo-text {
+        width: 260px;
+        top: -18px;
+        left: -22px;
+    }
+
+    .logo-text h1 {
+        font-size: 50px;
+        height: 40px;
+    }
+
+    .logo-text h2 {
+        font-size: 25px;
+        top: -17px;
+    }
+
+    .logo-text h3 {
+        font-size: 15px;
+        height: 10px;
+    }
+
+    .trademark {
+        font-size: 10px;
+    }
+
+    .windows-trademark {
+        top: -20px;
+    }
+
+    .microsoft-trademark {
+        top: -6px;
+    }
+
+    .loading-bar {
+        height: 20px;
+        width: 200px;
+        margin-top: 50px;
+    }
+
+    .loading-component {
+        height: 15px;
+        width: 10px;
+        background: linear-gradient(#4068FD 10%, white 50%, #4068FD 90%);
+        margin-left: 2px;
+        border-radius: 1px;
+    }
+
+    @keyframes loading {
+        0% {
+            transform: translate(-30px, 0);
+        }
+
+        100% {
+            transform: translate(200px, 0);
+        }
+    }
+
+    .copyrights {
+        padding: 10px;
+    }
+
+    .microsoft-copyright {
+        font-size: 13px;
+    }
+
+    .microsoft {
+        font-size: 20px;
+    }
+
+    @media (max-height: 450px) {
+        .container {
+            height: auto;
+        }
+
+        .windows-logo {
+            margin-top: 70px;
+        }
+
+        .loading-bar {
+            margin: 50px 0 80px;
+        }
+
+
+        .copyrights {
+            position: static;
+            margin-top: 10px;
+        }
+    }
+}
+
+@media (max-height: 660px) and (min-width: 850px) {
+    .container {
+        height: auto;
+    }
+
+    .windows-logo {
+        margin-top: 70px;
+    }
+
+    .loading-bar {
+        margin: 50px 0 80px;
+    }
+
+
+    .copyrights {
+        position: static;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
