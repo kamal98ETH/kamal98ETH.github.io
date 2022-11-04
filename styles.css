@@ -25,7 +25,7 @@
     flex-direction: column;
     align-items: center;
     padding-left: 9.375rem;
-    margin-top: -6.25rem;
+    margin-top: -3rem;
 }
 
 .logo {
@@ -168,7 +168,7 @@
     height: 1.563rem;
     width: 15.625rem;
     border: 2px solid white;
-    margin-top: 6.25rem;
+    margin-top: 4rem;
     border-radius: 0.625rem;
     display: flex;
     overflow: hidden;
@@ -287,7 +287,7 @@
     }
 
     .yellow-convex {
-        top: -18px;
+        top: -18rem;
         left: 2.938rem;
     }
 
