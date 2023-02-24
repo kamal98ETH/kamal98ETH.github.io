@@ -1,83 +1,124 @@
-/* #grey {
-   height: 150px;
-   width: 150px;
-   background-color: #C4C4C4;
+/* development stylings */
+
+/* #logo {
+    position: absolute;
+    width: 90px;
+    top: 20px;
+    left: 20px;
+}
+
+#logo svg #logo-path-1,
+#logo svg #logo-path-3 {
+    fill: #FE4106;
+    stroke: #FE4106;
+    stroke-width: .5;
+}
+
+#logo svg #logo-path-2 {
+    opacity: 0;
+    fill: #FE4106;
+}
+
+nav ul li {
+    opacity: 1;
+}
+
+#welcome svg {
+    fill: #fff;
+    stroke: #fff;
+    stroke-width: 1;
 }
 
 
-#orange {
-   height: 150px;
-   width: 150px;
-   background-color: #FE4106;
-} */
+
+
+
+#introduction {
+    width: 60%;
+    color: #C4C4C4;
+    margin: auto;
+    opacity: 0;
+    animation: fade-in-elements 1s ease-in-out forwards 1s;
+}
+
+#introduction p {
+    border-left: 2px solid #FE4106;
+    padding-left: 20px;
+    font-size: 18px;
+}
+
+#introduction p:first-child {
+    padding: 15px 0;
+    border: 0;
+    color: #fff;
+    font-size: 70px;
+}
+ */
+
+
 
 
 * {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000;
+    scroll-behavior: smooth;
 }
 
 
 #container {
-   height: 100vh;
-   width: 100%;
-   background-color: #000;
-}
-
-#navbar {
-    height: 60px;
     width: 100%;
+    color: #fff;
+    overflow: hidden;
 }
 
 #logo {
     width: 50%;
-    position: absolute;
-    top: 40%;
-    left: 25%;
-    animation: move 4s linear forwards;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+    animation: move 1s linear forwards 2.5s;
 }
 
 #logo svg {
-    /* max-width: 50%; */
-    margin: 0 auto;
- }
- 
- #logo svg {
     stroke-dasharray: 30px;
     stroke-dashoffset: 400px;
- }
- 
- 
- #logo svg #p1,
- #logo svg #p3 {
+}
+
+
+#logo svg #logo-path-1,
+#logo svg #logo-path-3 {
     fill: transparent;
     stroke: #FE4106;
     stroke-width: .5;
-    animation: draw 2.5s linear forwards;
- }
- 
- #logo svg #p2 {
+    animation: draw 2.5s ease-in forwards;
+}
+
+#logo svg #logo-path-2 {
     opacity: 0;
     fill: #FE4106;
-    animation: fade 2.5s linear forwards;
- }
- 
- @keyframes draw {
+    animation: fade 1s linear forwards 3.5s;
+}
+
+@keyframes draw {
     95% {
         stroke-dashoffset: 0;
         fill: transparent;
         stroke: #FE4106;
     }
- 
- 
+
+
     100% {
         fill: #FE4106;
         stroke: transparent;
     }
- }
+}
 
- @keyframes fade {
+@keyframes fade {
     0% {
         opacity: 0;
     }
@@ -88,16 +129,169 @@
 }
 
 @keyframes move {
-    80% {
+    0% {
         width: 50%;
-        top: 40%;
-        left: 25%; 
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     100% {
         width: 90px;
         top: 20px;
         left: 20px;
+        transform: translate(0, 0);
     }
 }
- 
+
+nav ul li {
+    opacity: 0;
+    animation: fade-in 1s ease-in-out forwards 4.5s;
+}
+
+nav ul li:nth-child(1) {
+    animation-delay: 4.2s;
+}
+
+nav ul li:nth-child(2) {
+    animation-delay: 4.4s;
+}
+
+nav ul li:nth-child(3) {
+    animation-delay: 4.6s;
+}
+
+nav ul li:nth-child(4) {
+    animation-delay: 4.8s;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+#navbar {
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    padding-right: 20px;
+    z-index: 10;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+#navbar ul {
+    list-style-type: none;
+    display: flex;
+    white-space: nowrap;
+}
+
+a {
+    transition: color .5s linear;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px;
+    margin: 0 5px;
+}
+
+a:hover {
+    transition: color .5s linear;
+    color: #FE4106;
+}
+
+#resume {
+    border: 2px solid #fff;
+    transition: color .5s linear, border-color .5s linear;
+    border-radius: 20px;
+}
+
+#resume:hover {
+    transition: color .5s linear, border-color .5s linear;
+    border-color: #FE4106;
+}
+
+#about-me {
+    height: calc(100vh - 230px);
+}
+
+#welcome {
+    width: 50%;
+    margin: 230px auto 70px;
+}
+
+#welcome svg {
+    stroke-dasharray: 300px;
+    stroke-dashoffset: 300px;
+}
+
+
+#welcome svg {
+    fill: transparent;
+    stroke: #fff;
+    stroke-width: 1;
+    animation: draw-welcome 2.3s ease-in forwards 5.7s;
+}
+
+@keyframes draw-welcome {
+    95% {
+        stroke-dashoffset: 0;
+        fill: transparent;
+        stroke: #fff;
+    }
+
+
+    100% {
+        fill: #fff;
+        stroke: transparent;
+    }
+}
+
+#introduction {
+    width: 60%;
+    color: #C4C4C4;
+    margin: auto;
+    opacity: 0;
+    animation: fade-in-elements 1s ease-in-out forwards 8.5s;
+}
+
+#introduction p {
+    border-left: 2px solid #FE4106;
+    padding-left: 20px;
+    font-size: 18px;
+}
+
+#introduction p:first-child {
+    padding: 15px 0;
+    border: 0;
+    color: #fff;
+    font-size: 70px;
+}
+
+.orange {
+    color: #FE4106;
+}
+
+@keyframes fade-in-elements {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#projects {
+    opacity: 0;
+}
