@@ -1,6 +1,11 @@
 /* development stylings */
+/* #svg-test {
+    background-color: white;
+    margin-top: 100px;
+} */
 
-/* #logo {
+
+#logo {
     position: absolute;
     width: 90px;
     top: 20px;
@@ -29,31 +34,12 @@ nav ul li {
     stroke-width: 1;
 }
 
-
-
-
-
 #introduction {
     width: 60%;
-    color: #C4C4C4;
     margin: auto;
-    opacity: 0;
-    animation: fade-in-elements 1s ease-in-out forwards 1s;
+    opacity: 1;
 }
 
-#introduction p {
-    border-left: 2px solid #FE4106;
-    padding-left: 20px;
-    font-size: 18px;
-}
-
-#introduction p:first-child {
-    padding: 15px 0;
-    border: 0;
-    color: #fff;
-    font-size: 70px;
-}
- */
 
 
 
@@ -74,7 +60,7 @@ nav ul li {
     overflow: hidden;
 }
 
-#logo {
+/* #logo {
     width: 50%;
     position: fixed;
     top: 50%;
@@ -102,7 +88,7 @@ nav ul li {
     opacity: 0;
     fill: #FE4106;
     animation: fade 1s linear forwards 3.5s;
-}
+} */
 
 @keyframes draw {
     95% {
@@ -144,10 +130,10 @@ nav ul li {
     }
 }
 
-nav ul li {
+/* nav ul li {
     opacity: 0;
     animation: fade-in 1s ease-in-out forwards 4.5s;
-}
+} */
 
 nav ul li:nth-child(1) {
     animation-delay: 4.2s;
@@ -221,6 +207,7 @@ a:hover {
 
 #about-me {
     height: calc(100vh - 230px);
+    min-height: 600px;
 }
 
 #welcome {
@@ -228,18 +215,14 @@ a:hover {
     margin: 230px auto 70px;
 }
 
-#welcome svg {
-    stroke-dasharray: 300px;
-    stroke-dashoffset: 300px;
-}
-
-
-#welcome svg {
+/* #welcome svg {
     fill: transparent;
     stroke: #fff;
     stroke-width: 1;
     animation: draw-welcome 2.3s ease-in forwards 5.7s;
-}
+    stroke-dasharray: 300px;
+    stroke-dashoffset: 300px;
+} */
 
 @keyframes draw-welcome {
     95% {
@@ -255,25 +238,27 @@ a:hover {
     }
 }
 
-#introduction {
+/* #introduction {
     width: 60%;
     color: #C4C4C4;
     margin: auto;
     opacity: 0;
     animation: fade-in-elements 1s ease-in-out forwards 8.5s;
-}
+} */
 
-#introduction p {
+p {
     border-left: 2px solid #FE4106;
     padding-left: 20px;
     font-size: 18px;
+    color: #C4C4C4;
 }
 
-#introduction p:first-child {
+#introduction h1 {
     padding: 15px 0;
     border: 0;
     color: #fff;
     font-size: 70px;
+    text-align: center;
 }
 
 .orange {
@@ -293,5 +278,115 @@ a:hover {
 }
 
 #projects {
-    opacity: 0;
+    padding: 100px 150px 0;
+}
+
+#projects h1 {
+    font-size: 60px;
+    text-align: center;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.project {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 150px;
+}
+
+.project-title {
+    text-align: center;
+    color: #FE4106;
+    font-size: 25px;
+    padding-bottom: 30px;
+    width: 100%;
+}
+
+.project-title h2 {
+    border-bottom: 1px solid #fff;
+    display: inline;
+}
+
+.project-screenshot {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.project-screenshot img {
+    border: 2px solid #fff;
+    width: 100%;
+}
+
+.project-description {
+    width: 50%;
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-languages,
+.project-links {
+    padding: 20px;
+    margin-top: 10px;
+    text-align: center;
+    width: 50%;
+}
+
+.project-languages p,
+.project-links p,
+.project-links a {
+    border: 0;
+    display: inline-block;
+    padding: 10px;
+}
+
+.project-languages-title,
+.project-links-title {
+    font-size: 25px;
+    color: #FE4106;
+    padding: 0 10px;
+}
+
+.language-circle {
+    color: #fff;
+}
+
+.language-circle::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 10px -5px;
+    border-radius: 50%;
+}
+
+.js::before {
+    background-color: #f1e05a;
+}
+
+.css::before {
+    background-color: #563d7c;
+}
+
+.html::before {
+    background-color: #e34c26;
+}
+
+.project-links svg {
+    height: 25px;
+    fill: #fff;
+    stroke: #FE4106;
+}
+
+#footer {
+    background-color: #fff;
+    min-height: 80px;
+    border-top: 5px solid #FE4106;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
