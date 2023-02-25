@@ -1,9 +1,4 @@
 /* development stylings */
-/* #svg-test {
-    background-color: white;
-    margin-top: 100px;
-} */
-
 
 #logo {
     position: absolute;
@@ -53,6 +48,21 @@ nav ul li {
     scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #C4C4C4;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #FE4106;
+}
 
 #container {
     width: 100%;
@@ -281,7 +291,8 @@ p {
     padding: 100px 150px 0;
 }
 
-#projects h1 {
+#projects h1,
+#contacts h1 {
     font-size: 60px;
     text-align: center;
     padding-bottom: 20px;
@@ -316,6 +327,10 @@ p {
 .project-screenshot img {
     border: 2px solid #fff;
     width: 100%;
+}
+
+.project-screenshot img:hover {
+    border-color: #FE4106;
 }
 
 .project-description {
@@ -378,6 +393,50 @@ p {
     height: 25px;
     fill: #fff;
     stroke: #FE4106;
+}
+
+#contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 150px 20px;
+}
+
+#contacts p {
+    text-align: center;
+    border: 0;
+    color: #FE4106;
+    margin-bottom: 20px;
+}
+
+#contacts img {
+    height: 50px;
+}
+
+#external-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 150px 30px;
+}
+
+#external-links ul {
+    list-style-type: none;
+    display: flex;
+}
+
+#external-links a {
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+#external-links svg {
+    width: 70%;
+    fill: #fff;
 }
 
 #footer {
