@@ -1,10 +1,22 @@
-// Disable scrolling on page load
-document.body.style.overflow = 'hidden';
-
 // Wait for 7 seconds before enabling scrolling
 setTimeout(function () {
     document.body.style.overflow = 'auto';
-}, 7300);
+    document.documentElement.style.scrollBehavior = 'smooth';
+}, 7000);
+
+// Scroll to top of page on reload
+window.addEventListener('load', function () {
+    setTimeout(function () {
+        window.scrollTo(0, 0);
+    }, 0);
+});
+
+// Disable scrolling until 7 seconds have passed
+document.addEventListener('DOMContentLoaded', function () {
+    document.body.style.overflow = 'hidden';
+});
+
+
 
 // add fade effect when u reach the element
 const observer = new IntersectionObserver((entries, observer) => {
@@ -57,13 +69,10 @@ navbarToggle.addEventListener("click", function () {
 window.onload = function () {
     const hamburger = document.querySelector('.navbar-toggle');
     const children = hamburger.children
-    console.log(children)
     setTimeout(function () {
         hamburger.classList.add('navbar-toggle-fade-in');
         setTimeout(function () {
-            console.log("hey")
             for (let i = 0; i < children.length; i++) {
-                console.log(children[i])
                 children[i].classList.add('show')
             }
             setTimeout(function () {
