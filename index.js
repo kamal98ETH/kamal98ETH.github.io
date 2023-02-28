@@ -1,22 +1,10 @@
-// Wait for 7 seconds before enabling scrolling
-setTimeout(function () {
-    document.body.style.overflow = 'auto';
-    document.documentElement.style.scrollBehavior = 'smooth';
-}, 7000);
-
-// Scroll to top of page on reload
-window.addEventListener('load', function () {
-    setTimeout(function () {
-        window.scrollTo(0, 0);
-    }, 0);
-});
-
-// Disable scrolling until 7 seconds have passed
-document.addEventListener('DOMContentLoaded', function () {
-    document.body.style.overflow = 'hidden';
-});
-
-
+// showing the web page only after the loading animation finishes
+setTimeout(() => {
+    const elements = document.getElementsByClassName("wait-to-display");
+    Array.from(elements).forEach((element) => {
+        element.classList.remove("wait-to-display");
+    });
+}, 5000)
 
 // add fade effect when u reach the element
 const observer = new IntersectionObserver((entries, observer) => {
@@ -54,15 +42,27 @@ observer.observe(footer);
 // toggle hamburger button
 const navbarToggle = document.querySelector(".navbar-toggle");
 const navbarmenu = document.querySelector(".navbar-menu");
+const main = document.getElementById("main")
 
 navbarToggle.addEventListener("click", function () {
-    console.log(navbarToggle)
     this.classList.toggle("active-toggle");
+    main.classList.toggle('blur');
+    footer.classList.toggle('blur');
 });
 
 navbarToggle.addEventListener("click", function () {
-    console.log(navbarToggle)
     navbarmenu.classList.toggle("active-menu");
+});
+
+//close the menu after clicking a link on the menu
+const menuLinks = document.querySelectorAll('.navbar-menu a');
+menuLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+        navbarmenu.classList.remove('active-menu');
+        navbarToggle.classList.remove('active-toggle');
+        main.classList.remove('blur');
+        footer.classList.remove('blur');
+    });
 });
 
 // add and remove animation class from the toggle button after some time
@@ -79,5 +79,17 @@ window.onload = function () {
                 hamburger.classList.remove('navbar-toggle-fade-in');
             }, 1000);
         }, 1000);
-    }, 2500)
+    }, 1400)
 };
+
+
+// close the menu when u click outside of it
+const navbar = document.getElementById('navbar');
+document.addEventListener('click', (event) => {
+    if (!navbarmenu.contains(event.target) && event.target !== navbarToggle && !navbar.contains(event.target)) {
+        navbarmenu.classList.remove('active-menu');
+        navbarToggle.classList.remove('active-toggle');
+        main.classList.remove('blur');
+        footer.classList.remove('blur');
+    }
+});
