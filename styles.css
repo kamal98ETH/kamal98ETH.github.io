@@ -48,12 +48,6 @@
     scroll-behavior: smooth;
 }
 
-html,
-body {
-    height: 100%;
-    overflow: hidden;
-}
-
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -226,21 +220,13 @@ a:hover {
 }
 
 #about-me {
-    /* height: calc(100vh - 230px); */
-    /* min-height: 600px; */
-    display: flex;
-
-    flex-direction: column;
+    height: calc(100vh - 230px);
+    min-height: 600px;
 }
 
 #welcome {
     width: 50%;
-    height: calc(50vh - 40px);
-    display: flex;
-    margin: 80px auto 0;
-    /* justify-content: center;
-    align-items: center; */
-    /* margin: 230px auto 70px; */
+    margin: 230px auto 70px;
 }
 
 #welcome svg {
