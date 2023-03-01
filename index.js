@@ -79,7 +79,7 @@ window.onload = function () {
                 hamburger.classList.remove('navbar-toggle-fade-in');
             }, 1000);
         }, 1000);
-    }, 1400)
+    }, 2000)
 };
 
 

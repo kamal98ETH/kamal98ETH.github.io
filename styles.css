@@ -220,13 +220,21 @@ a:hover {
 }
 
 #about-me {
-    height: calc(100vh - 230px);
-    min-height: 600px;
+    /* height: calc(100vh - 230px); */
+    /* min-height: 600px; */
+    display: flex;
+
+    flex-direction: column;
 }
 
 #welcome {
     width: 50%;
-    margin: 230px auto 70px;
+    height: calc(50vh - 40px);
+    display: flex;
+    margin: 80px auto 0;
+    /* justify-content: center;
+    align-items: center; */
+    /* margin: 230px auto 70px; */
 }
 
 #welcome svg {
@@ -258,6 +266,7 @@ a:hover {
     margin: auto;
     opacity: 0;
     animation-delay: 5s;
+    height: calc(50vh - 40px);
 }
 
 .fade-in-elements {
